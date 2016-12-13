@@ -11,6 +11,18 @@ Summary: A wrapper for the US Census Bureau's API
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/census-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/census-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/census-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/census-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/census-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/census-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/census/badges/version.svg)](https://anaconda.org/conda-forge/census)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/census/badges/downloads.svg)](https://anaconda.org/conda-forge/census)
+
 Installing census
 =================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `census` available on your platfor
 ```
 conda search census --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/census-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/census-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/census-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/census-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/census-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/census-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/census/badges/version.svg)](https://anaconda.org/conda-forge/census)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/census/badges/downloads.svg)](https://anaconda.org/conda-forge/census)
 
 
 Updating census-feedstock
