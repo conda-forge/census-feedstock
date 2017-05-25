@@ -1,22 +1,21 @@
-{%set name = "census" %}
-{%set version = "0.8.2" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "c653a016d7a8e9eddd2850a97c24dd1fe3de87e70b32ae4cd58632392f0b8520" %}
-{%set build_num = "0" %}
+{% set name = "census" %}
+{% set version = "0.8.2" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "c653a016d7a8e9eddd2850a97c24dd1fe3de87e70b32ae4cd58632392f0b8520" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  skip: True  # [py36]
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -27,7 +26,6 @@ requirements:
   run:
     - python
     - requests >=1.1.0
-    - us >=0.7
 
 test:
   imports:
@@ -36,8 +34,8 @@ test:
 
 about:
   home: http://github.com/sunlightlabs/census
-  license: BSD 3-Clause
   license_file: LICENSE
+  license: BSD 3-Clause
   license_family: BSD
   summary: "A wrapper for the US Census Bureau's API"
   dev_url: http://github.com/sunlightlabs/census
