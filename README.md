@@ -14,9 +14,7 @@ Summary: A wrapper for the US Census Bureau's API
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/census-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/census-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/census-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/census-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/census-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/census-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/census-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/census-feedstock)
 
 Current release info
 ====================
