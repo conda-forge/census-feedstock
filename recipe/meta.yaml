@@ -1,8 +1,8 @@
 {% set name = "census" %}
-{% set version = "0.8.10" %}
+{% set version = "0.8.11" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "b6fb2dc83ff8667906b02e949b0476b922cdd02a8e0a3f0dfdb7ec7bebe378d5" %}
+{% set hash = "16724a19be2a155157e38ebbd9fe7125e10ebc1bdd85922ce474ecae0eb6623d" %}
 
 package:
   name: {{ name|lower }}
