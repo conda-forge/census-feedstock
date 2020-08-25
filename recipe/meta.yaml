@@ -1,8 +1,7 @@
 {% set name = "census" %}
-{% set version = "0.8.11" %}
+{% set version = "0.8.15" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "16724a19be2a155157e38ebbd9fe7125e10ebc1bdd85922ce474ecae0eb6623d" %}
+{% set hash = "1c3826c7e6c16f5eec49a54030668ba8dd7b6d950657fbd3d16b79d43bea95cf" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   noarch: python
@@ -40,7 +39,7 @@ about:
   license_file: LICENSE
   license: BSD 3-Clause
   license_family: BSD
-  summary: "A wrapper for the US Census Bureau's API"
+  summary: A wrapper for the US Census Bureau's API
   dev_url: http://github.com/sunlightlabs/census
 
 extra:
