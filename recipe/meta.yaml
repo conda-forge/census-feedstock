@@ -1,44 +1,44 @@
 {% set name = "census" %}
-{% set version = "0.8.11" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "16724a19be2a155157e38ebbd9fe7125e10ebc1bdd85922ce474ecae0eb6623d" %}
+{% set version = "0.8.17" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cbf0cf6a1dde600a34c0b52239d694e144c527dd98f385361a6708f9bf42410c
 
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - pip
+    - python >=3.6
     - setuptools
 
   run:
-    - python
+    - python >=3.6
     - requests >=1.1.0
     - future
-    - backports.functools_lru_cache  # [py<33]
     - setuptools
 
 test:
   imports:
     - census
     - census.tests
+  commands:
+    - pip check
+  requires: 
+    - pip
 
 about:
   home: http://github.com/sunlightlabs/census
   license_file: LICENSE
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   summary: "A wrapper for the US Census Bureau's API"
   dev_url: http://github.com/sunlightlabs/census
@@ -46,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
