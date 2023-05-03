@@ -1,5 +1,5 @@
 {% set name = "census" %}
-{% set version = "0.8.17" %}
+{% set version = "0.8.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cbf0cf6a1dde600a34c0b52239d694e144c527dd98f385361a6708f9bf42410c
+  sha256: 88b6469bb5ad72968dc1032ffe9eb3730f4a258485cd6d9dd388e2355653a712
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ test:
     - census.tests
   commands:
     - pip check
-  requires: 
+  requires:
     - pip
 
 about:
@@ -40,7 +40,7 @@ about:
   license_file: LICENSE
   license: BSD-3-Clause
   license_family: BSD
-  summary: "A wrapper for the US Census Bureau's API"
+  summary: A wrapper for the US Census Bureau's API
   dev_url: http://github.com/sunlightlabs/census
 
 extra:
