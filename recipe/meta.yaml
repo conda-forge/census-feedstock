@@ -1,5 +1,5 @@
 {% set name = "census" %}
-{% set version = "0.8.26" %}
+{% set version = "0.8.27" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c7f9944e38952b4ecc137d14d083018a1c2734f64d2fbc4a8946f35fd51888c2
+  sha256: 207aae0f83650004f6b7dab6a730b6a60df96a119f55167260c3153313f15a32
 
 build:
   noarch: python
