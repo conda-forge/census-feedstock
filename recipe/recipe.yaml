@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  name: census
+  version: 0.8.27
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 207aae0f83650004f6b7dab6a730b6a60df96a119f55167260c3153313f15a32
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - requests >=1.1.0
+    - future
+    - setuptools
+
+tests:
+  - python:
+      imports:
+        - census
+        - census.tests
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license_file: LICENSE
+  license: BSD-3-Clause
+  summary: A wrapper for the US Census Bureau's API
+  homepage: http://github.com/sunlightlabs/census
+  repository: http://github.com/sunlightlabs/census
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - jan-janssen
